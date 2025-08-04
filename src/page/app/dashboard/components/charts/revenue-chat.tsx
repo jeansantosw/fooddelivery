@@ -81,7 +81,7 @@ export function RevenueChat() {
               type="linear"
               strokeWidth={2}
               dataKey="revenue"
-              stroke={colors.orange['500']}
+              stroke={colors.amber['600']}
             />
           </LineChart>
         </ResponsiveContainer>
