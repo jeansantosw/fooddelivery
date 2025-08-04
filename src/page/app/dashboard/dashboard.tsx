@@ -1,7 +1,8 @@
-import { DayOrdersAmountCard } from './components/day-orders-amount-card'
-import { MonthlyCanceledOrdersAmountCard } from './components/monthly-canceled-orders-amount-card'
-import { MonthlyOrdersAmountCard } from './components/monthly-orders-amount-card'
-import { MonthlyPrescriptionCard } from './components/monthly-prescription-card'
+import { DayOrdersAmountCard } from './components/cards/day-orders-amount-card'
+import { MonthlyCanceledOrdersAmountCard } from './components/cards/monthly-canceled-orders-amount-card'
+import { MonthlyOrdersAmountCard } from './components/cards/monthly-orders-amount-card'
+import { MonthlyPrescriptionCard } from './components/cards/monthly-prescription-card'
+import { RevenueChat } from './components/charts/revenue-chat'
 
 export function Dasboard() {
   return (
@@ -12,6 +13,9 @@ export function Dasboard() {
         <MonthlyOrdersAmountCard />
         <DayOrdersAmountCard />
         <MonthlyCanceledOrdersAmountCard />
+      </div>
+      <div className="grid grid-cols-9 gap-4">
+        <RevenueChat />
       </div>
     </div>
   )
