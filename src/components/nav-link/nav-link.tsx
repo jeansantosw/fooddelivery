@@ -6,6 +6,9 @@ export function NavLink(props: TNavLink) {
   const { pathname } = useLocation()
   const isCurrentLink = pathname === props.to
 
+  console.log('path name:', pathname)
+  console.log('props to:', props.to)
+
   return (
     <Link
       data-current={isCurrentLink}
