@@ -1,4 +1,5 @@
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
 
 import { Button } from '@/components/ui/button'
@@ -21,7 +22,7 @@ export function SignIn() {
   }
 
   return (
-    <div className="p-5">
+    <div className="p-8">
       <div className="flex w-80 flex-col items-center justify-center gap-6">
         <div className="flex flex-col gap-2 text-center">
           <h1 className="text-2xl font-semibold tracking-tight">
@@ -39,8 +40,11 @@ export function SignIn() {
             <Label htmlFor="email">Digite seu e-mail</Label>
             <Input id="email" type="email" {...register('email')} />
           </div>
-          <Button disabled={isSubmitting} className="w-full" type="submit">
-            ACESSAR
+          <Button disabled={isSubmitting} className="mt-2 w-full" type="submit">
+            Acessar painel
+          </Button>
+          <Button asChild className="w-full" variant="link">
+            <Link to="/sign-up">Cadastrar novo estabelecimento</Link>
           </Button>
         </form>
       </div>
