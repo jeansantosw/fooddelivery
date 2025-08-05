@@ -1,10 +1,10 @@
 import z from 'zod'
 
-export const commercialStoreProfileDialogSchema = z.object({
+export const commercialStoreProfileDialogFormSchema = z.object({
   name: z.string().min(1),
-  description: z.string(),
+  description: z.string().nullable(),
 })
 
-export type TCommercialStoreProfileDialog = z.infer<
-  typeof commercialStoreProfileDialogSchema
+export type TCommercialStoreProfileDialogForm = z.infer<
+  typeof commercialStoreProfileDialogFormSchema
 >

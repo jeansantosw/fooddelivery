@@ -20,8 +20,8 @@ import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Textarea } from '../ui/textarea'
 import {
-  commercialStoreProfileDialogSchema,
-  type TCommercialStoreProfileDialog,
+  commercialStoreProfileDialogFormSchema,
+  type TCommercialStoreProfileDialogForm,
 } from './types'
 
 export function CommercialStoreProfileDialog() {
@@ -33,20 +33,40 @@ export function CommercialStoreProfileDialog() {
     staleTime: Infinity,
   })
 
+  function updateCommercialStoreProfileCache({
+    name,
+    description,
+  }: TCommercialStoreProfileDialogForm) {
+    const cached = queryClient.getQueryData<IGetManagedCommercialStoreResponse>(
+      ['managed-commercial-store'],
+    )
+
+    if (cached) {
+      queryClient.setQueryData(['managed-commercial-store'], {
+        ...cached,
+        name,
+        description,
+      })
+    }
+
+    return { cached }
+  }
+
   const { mutateAsync: updateCommercialStoreProfileFn } = useMutation({
     mutationFn: updateCommercialStoreProfile,
-    onSuccess(_, { name, description }) {
-      const cached =
-        queryClient.getQueryData<IGetManagedCommercialStoreResponse>([
-          'managed-commercial-store',
-        ])
+    onMutate({ name, description }) {
+      const { cached } = updateCommercialStoreProfileCache({
+        name,
+        description,
+      })
+      return { previousCommericalStoreProfile: cached }
+    },
 
-      if (cached) {
-        queryClient.setQueryData(['managed-commercial-store'], {
-          ...cached,
-          name,
-          description,
-        })
+    onError(_, __, context) {
+      if (context?.previousCommericalStoreProfile) {
+        updateCommercialStoreProfileCache(
+          context.previousCommericalStoreProfile,
+        )
       }
     },
   })
@@ -55,8 +75,8 @@ export function CommercialStoreProfileDialog() {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<TCommercialStoreProfileDialog>({
-    resolver: zodResolver(commercialStoreProfileDialogSchema),
+  } = useForm<TCommercialStoreProfileDialogForm>({
+    resolver: zodResolver(commercialStoreProfileDialogFormSchema),
     values: {
       name: managedCommercialStore?.name ?? '',
       description: managedCommercialStore?.description ?? '',
@@ -64,7 +84,7 @@ export function CommercialStoreProfileDialog() {
   })
 
   async function handleUpdateCommercialStoreProfile(
-    data: TCommercialStoreProfileDialog,
+    data: TCommercialStoreProfileDialogForm,
   ) {
     try {
       await updateCommercialStoreProfileFn({
