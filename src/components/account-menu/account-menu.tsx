@@ -13,6 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu'
+import { Skeleton } from '../ui/skeleton'
 
 export function AccountMenu() {
   const { data: profile } = useQuery({
@@ -20,7 +21,10 @@ export function AccountMenu() {
     queryFn: getProfile,
   })
 
-  const { data: managedCommercialStore } = useQuery({
+  const {
+    data: managedCommercialStore,
+    isLoading: isLoadingManagedCommercialStore,
+  } = useQuery({
     queryKey: ['managed-commercial-store'],
     queryFn: getManagedCommercialStore,
   })
@@ -31,7 +35,11 @@ export function AccountMenu() {
           variant="outline"
           className="flex items-center gap-2 select-none"
         >
-          {managedCommercialStore?.name}
+          {isLoadingManagedCommercialStore ? (
+            <Skeleton className="h-4 w-40" />
+          ) : (
+            managedCommercialStore?.name
+          )}
           <ChevronDown className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
