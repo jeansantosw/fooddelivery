@@ -1,7 +1,9 @@
+import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { toast } from 'sonner'
 
+import { signIn } from '@/api/http/services/auth/sign-in'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -9,16 +11,28 @@ import { Label } from '@/components/ui/label'
 import type { TSigninForm } from './types'
 
 export function SignIn() {
+  const [searchParams] = useSearchParams()
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
-  } = useForm<TSigninForm>()
+  } = useForm<TSigninForm>({
+    defaultValues: {
+      email: searchParams.get('email') ?? '',
+    },
+  })
 
-  async function handleSignin(data: TSigninForm) {
-    console.log(data)
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    toast.success('Check seu e-mail')
+  const { mutateAsync: authenticate } = useMutation({
+    mutationFn: signIn,
+  })
+
+  async function handleSignin({ email }: TSigninForm) {
+    try {
+      await authenticate({ email })
+      toast.success('Check seu e-mail')
+    } catch {
+      toast.error('Credenciais inválidas')
+    }
   }
 
   return (

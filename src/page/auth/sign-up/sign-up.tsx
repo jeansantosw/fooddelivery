@@ -1,7 +1,9 @@
+import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'sonner'
 
+import { commercialStoreRegistration } from '@/api/http/services/auth/register'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -9,22 +11,30 @@ import { Label } from '@/components/ui/label'
 import type { TSignupForm } from './types'
 
 export function SignUp() {
-  // const navegate = useNavigate()
+  const navegate = useNavigate()
   const {
     register,
     handleSubmit,
     formState: { isSubmitting },
   } = useForm<TSignupForm>()
 
+  const { mutateAsync: commercialStoreRegistrationFn } = useMutation({
+    mutationFn: commercialStoreRegistration,
+  })
+
   async function handleSignup(data: TSignupForm) {
     try {
-      console.log(data)
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      await commercialStoreRegistrationFn({
+        restaurantName: data.restaurantName,
+        managerName: data.managerName,
+        phone: data.phoneNumber,
+        email: data.email,
+      })
       toast.success('Estabelecimento cadastrado com sucesso!', {
-        // action: {
-        //   label: 'Login',
-        //   onClick: () => navegate('/sign-in'),
-        // },
+        action: {
+          label: 'Login',
+          onClick: () => navegate(`/sign-in?email=${data.email}`),
+        },
       })
     } catch {
       toast.error('Erro ao realizar cadastro')
