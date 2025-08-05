@@ -1,8 +1,8 @@
 import { api } from '../../axios'
-import type { IGetManagedCommercialStore } from './types'
+import type { IGetManagedCommercialStoreResponse } from './types'
 
 export async function getManagedCommercialStore() {
-  const response = await api.get<IGetManagedCommercialStore>(
+  const response = await api.get<IGetManagedCommercialStoreResponse>(
     '/managed-restaurant',
   )
 
