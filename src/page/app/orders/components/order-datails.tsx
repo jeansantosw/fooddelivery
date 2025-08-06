@@ -43,9 +43,12 @@ export function OrderDetails({ orderId }: IOrderDetails) {
         </Button>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader>
+        <DialogHeader className="mb-3">
           <span className="text-primary/80 font-semibold tracking-tight">
-            Numero do pedido: {orderId}
+            <span className="text-muted-foreground pr-1">
+              Numero do pedido:{' '}
+            </span>
+            {orderId.toLocaleUpperCase()}
           </span>
           <DialogDescription className="text-xs">
             Detalhes do pedido
