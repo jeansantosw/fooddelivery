@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { getDayOrdersAmount } from '@/api/http/services/order-metrics-dashboard/get-day-orders-amount'
 
 export function DayOrdersAmountCard() {
-  const { data: dayOrdersAmount } = useQuery({
+  const { data: getDayOrdersAmountFn } = useQuery({
     queryKey: ['metrics', 'day-orders-amount'],
     queryFn: getDayOrdersAmount
   })
@@ -19,17 +19,17 @@ export function DayOrdersAmountCard() {
         <Utensils className="text-muted-foreground h-4 w-4" />
       </CardHeader>
       <CardContent className="space-y-1">
-        {dayOrdersAmount && (
+        {getDayOrdersAmountFn && (
           <>
-            <span className="text-2xl font-bold tracking-tight">{dayOrdersAmount.amount.toLocaleString('pt-PT')}</span>
-            {dayOrdersAmount.diffFromYesterday >= 0 ? (
+            <span className="text-2xl font-bold tracking-tight">{getDayOrdersAmountFn.amount.toLocaleString('pt-PT')}</span>
+            {getDayOrdersAmountFn.diffFromYesterday >= 0 ? (
               <p className="to-muted-foreground text-xs">
-                <span className="text-shadow-emerald-700 dark:text-emerald-600">+{dayOrdersAmount.diffFromYesterday}% </span>
+                <span className="text-shadow-emerald-700 dark:text-emerald-600">+{getDayOrdersAmountFn.diffFromYesterday}% </span>
                 em relação ao dia anterior
               </p>
             ) : (
               <p className="to-muted-foreground text-xs">
-                <span className="text-red-500 dark:text-red-400">{dayOrdersAmount.diffFromYesterday}% </span>
+                <span className="text-red-500 dark:text-red-400">{getDayOrdersAmountFn.diffFromYesterday}% </span>
                 em relação ao dia anterior
               </p>
             )}

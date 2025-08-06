@@ -5,7 +5,7 @@ import { getMonthOrdersAmount } from '@/api/http/services/order-metrics-dashboar
 import { useQuery } from '@tanstack/react-query'
 
 export function MonthlyOrdersAmountCard() {
-  const { data: monthlyOrdersAmount } = useQuery({
+  const { data: getMonthOrdersAmountFn } = useQuery({
     queryKey: ['metrics', 'monthly-orders-amount'],
     queryFn: getMonthOrdersAmount
   })
@@ -19,20 +19,20 @@ export function MonthlyOrdersAmountCard() {
         <Utensils className="text-muted-foreground h-4 w-4" />
       </CardHeader>
       <CardContent className="space-y-1">
-        {monthlyOrdersAmount && (
+        {getMonthOrdersAmountFn && (
           <>
-            <span className="text-2xl font-bold tracking-tight">{monthlyOrdersAmount.amount}</span>
-            {monthlyOrdersAmount.diffFromLastMonth >= 0 ? (
+            <span className="text-2xl font-bold tracking-tight">{getMonthOrdersAmountFn.amount}</span>
+            {getMonthOrdersAmountFn.diffFromLastMonth >= 0 ? (
               <>
                 <p className="to-muted-foreground text-xs">
-                  <span className="text-shadow-emerald-700 dark:text-emerald-600">+{monthlyOrdersAmount.diffFromLastMonth}% </span>
+                  <span className="text-shadow-emerald-700 dark:text-emerald-600">+{getMonthOrdersAmountFn.diffFromLastMonth}% </span>
                   em comparação ao mês anterior
                 </p>
               </>
             ) : (
               <>
                 <p className="to-muted-foreground text-xs">
-                  <span className="text-red-500 dark:text-red-400">{monthlyOrdersAmount.diffFromLastMonth}% </span>
+                  <span className="text-red-500 dark:text-red-400">{getMonthOrdersAmountFn.diffFromLastMonth}% </span>
                   em comparação ao mês anterior
                 </p>
               </>

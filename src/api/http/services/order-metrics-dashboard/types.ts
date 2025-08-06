@@ -14,6 +14,6 @@ export interface IGetMonthCanceledOrdersAmountResponse {
 }
 
 export interface IGetMonthRevenueResponse {
-  amount: number
+  receipt: number
   diffFromLastMonth: number
 }
