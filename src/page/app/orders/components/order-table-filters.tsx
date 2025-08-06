@@ -32,23 +32,16 @@ export function OrderTableFilters() {
       },
     })
 
-  function handleFilter({ orderId, customerName, status }: TOrderTableFilters) {
+  function handleFilter(data: TOrderTableFilters) {
     setSearchParams((state) => {
-      if (orderId) {
-        state.set('orderId', orderId)
-      } else {
-        state.delete('orderId')
-      }
-      if (customerName) {
-        state.set('customerName', customerName)
-      } else {
-        state.delete('customerName')
-      }
-      if (status) {
-        state.set('status', status)
-      } else {
-        state.delete('status')
-      }
+      Object.entries(data).forEach(([key, value]) => {
+        if (value) {
+          state.set(key, value)
+        } else {
+          state.delete(key, value)
+        }
+      })
+      state.set('page', '1')
 
       return state
     })
