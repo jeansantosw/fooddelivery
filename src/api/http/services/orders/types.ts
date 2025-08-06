@@ -24,6 +24,22 @@ export interface IGetOrderDatailsParams {
   orderId: string
 }
 
+export interface ICancelOrderParams {
+  orderId: string
+}
+
+export interface IApproveOrderParams {
+  orderId: string
+}
+
+export interface IDeliverOrderParams {
+  orderId: string
+}
+
+export interface IDispatchOrderParams {
+  orderId: string
+}
+
 export interface IGetOrderDatailsResponse {
   status: 'pending' | 'canceled' | 'processing' | 'delivering' | 'delivered'
   id: string
