@@ -1,5 +1,8 @@
 export interface IGetOrderParams {
   pageIndex?: number | null
+  orderId?: string | null
+  customerName?: string | null
+  status?: string | null
 }
 
 export interface IGetOrdersResponse {

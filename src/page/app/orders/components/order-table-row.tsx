@@ -10,7 +10,6 @@ import { OrderDetails } from './order-datails'
 import { OrderStatus } from './order-status'
 
 export function OrderTableRow({ order }: IOrderTableRow) {
-  console.log(order)
   return (
     <TableRow>
       <TableCell>

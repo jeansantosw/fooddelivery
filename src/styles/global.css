@@ -117,4 +117,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  input:-webkit-autofill {
+    @apply text-inherit bg-inherit;
+    box-shadow: 0 0 0 100px #181818 inset !important;
+    -webkit-text-fill-color: var(--muted-foreground) !important;
+  }
 }

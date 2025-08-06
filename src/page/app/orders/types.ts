@@ -1,3 +1,5 @@
+import z from 'zod'
+
 export type TOrderStatus =
   | 'pending'
   | 'canceled'
@@ -26,3 +28,11 @@ export interface IOrderTableRow {
     total: number
   }
 }
+
+export const orderTableFiltersSchema = z.object({
+  orderId: z.string().optional(),
+  customerName: z.string().optional(),
+  status: z.string().optional(),
+})
+
+export type TOrderTableFilters = z.infer<typeof orderTableFiltersSchema>
