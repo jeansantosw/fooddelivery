@@ -13,7 +13,7 @@ export function OrderTableRow({ order }: IOrderTableRow) {
   return (
     <TableRow>
       <TableCell>
-        <OrderDetails />
+        <OrderDetails orderId={order.orderId} />
       </TableCell>
       <TableCell className="font-mono text-xs font-medium">
         {order.orderId}
@@ -29,7 +29,7 @@ export function OrderTableRow({ order }: IOrderTableRow) {
       </TableCell>
       <TableCell className="font-medium">{order.customerName}</TableCell>
       <TableCell className="font-medium">
-        {order.total.toLocaleString('pt-PT', {
+        {(order.total / 100).toLocaleString('pt-PT', {
           style: 'currency',
           currency: 'EUR',
         })}

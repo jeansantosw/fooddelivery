@@ -36,3 +36,7 @@ export const orderTableFiltersSchema = z.object({
 })
 
 export type TOrderTableFilters = z.infer<typeof orderTableFiltersSchema>
+
+export interface IOrderDetails {
+  orderId: string
+}
