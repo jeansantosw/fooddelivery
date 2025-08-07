@@ -1,7 +1,7 @@
 import { Utensils } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getMonthOrdersAmount } from '@/api/http/services/order-metrics-dashboard/get-month-orders-amount'
+import { getMonthOrdersAmount } from '@/api/http/services/order-metrics-dashboard-cards/get-month-orders-amount'
 import { useQuery } from '@tanstack/react-query'
 
 export function MonthlyOrdersAmountCard() {

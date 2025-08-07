@@ -1,7 +1,7 @@
 import { Percent } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getMonthCanceledOrdersAmount } from '@/api/http/services/order-metrics-dashboard/get-month-canceled-orders-amount'
+import { getMonthCanceledOrdersAmount } from '@/api/http/services/order-metrics-dashboard-cards/get-month-canceled-orders-amount'
 import { useQuery } from '@tanstack/react-query'
 
 export function MonthlyCanceledOrdersAmountCard() {

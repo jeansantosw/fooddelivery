@@ -1,7 +1,7 @@
 import { EuroIcon } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { getMonthRevenue } from '@/api/http/services/order-metrics-dashboard/get-month-revenue'
+import { getMonthRevenue } from '@/api/http/services/order-metrics-dashboard-cards/get-month-revenue'
 import { useQuery } from '@tanstack/react-query'
 
 export function MonthlyPrescriptionCard() {

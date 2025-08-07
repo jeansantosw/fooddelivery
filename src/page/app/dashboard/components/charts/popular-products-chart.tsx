@@ -4,38 +4,7 @@ import colors from 'tailwindcss/colors'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useQuery } from '@tanstack/react-query'
-import { getPopularPproducts } from '@/api/http/services/order-metrics-graphic/get-popular-products'
-
-const data = [
-  {
-    product: 'Coca-cola',
-    amount: 40,
-  },
-  {
-    product: 'Hot Dog',
-    amount: 15,
-  },
-  {
-    product: 'Hamburguer',
-    amount: 51,
-  },
-  {
-    product: 'Salada',
-    amount: 10,
-  },
-  {
-    product: 'Sumo',
-    amount: 111,
-  },
-  {
-    product: 'Feijoada',
-    amount: 133,
-  },
-  {
-    product: 'Francesinha',
-    amount: 200,
-  },
-]
+import { getPopularPproducts } from '@/api/http/services/order-metrics-dashboard-graphic/get-popular-products'
 
 const COLORS = [
   colors.sky[500],

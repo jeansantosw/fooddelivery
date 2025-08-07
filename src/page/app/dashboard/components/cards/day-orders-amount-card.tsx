@@ -2,7 +2,7 @@ import { Utensils } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useQuery } from '@tanstack/react-query'
-import { getDayOrdersAmount } from '@/api/http/services/order-metrics-dashboard/get-day-orders-amount'
+import { getDayOrdersAmount } from '@/api/http/services/order-metrics-dashboard-cards/get-day-orders-amount'
 
 export function DayOrdersAmountCard() {
   const { data: getDayOrdersAmountFn } = useQuery({
