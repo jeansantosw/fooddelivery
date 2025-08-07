@@ -7,12 +7,13 @@ import { Dasboard } from '@/page/app/dashboard/dashboard'
 import { Orders } from '@/page/app/orders/orders'
 import { SignIn } from '@/page/auth/sign-in/sign-in'
 import { SignUp } from '@/page/auth/sign-up/sign-up'
+import { Error } from '@/page/error'
 
 export const routes = createBrowserRouter([
   {
     path: '/',
     element: <AppLayout />,
-    errorElement: <NotFound />,
+    errorElement: <Error />,
     children: [
       { path: '/', element: <Dasboard /> },
       { path: '/orders', element: <Orders /> },
@@ -32,4 +33,8 @@ export const routes = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '*',
+    element: <NotFound />
+  }
 ])
