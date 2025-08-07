@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react'
 import { OrderStatus } from './order-status'
 
-describe('Order status', () => {
+describe('🔥 Order status', () => {
   it('should show exact text in (pending) order status', () => {
 
     const { getByText, getByTestId } = render(<OrderStatus status='pending' />)
