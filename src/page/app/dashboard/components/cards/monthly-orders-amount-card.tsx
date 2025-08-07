@@ -3,6 +3,7 @@ import { Utensils } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { getMonthOrdersAmount } from '@/api/http/services/order-metrics-dashboard-cards/get-month-orders-amount'
 import { useQuery } from '@tanstack/react-query'
+import { CardSkeleton } from './cards-skeleton/cards-skeleton'
 
 export function MonthlyOrdersAmountCard() {
   const { data: getMonthOrdersAmountFn } = useQuery({
@@ -19,7 +20,7 @@ export function MonthlyOrdersAmountCard() {
         <Utensils className="text-muted-foreground h-4 w-4" />
       </CardHeader>
       <CardContent className="space-y-1">
-        {getMonthOrdersAmountFn && (
+        {getMonthOrdersAmountFn ? (
           <>
             <span className="text-2xl font-bold tracking-tight">{getMonthOrdersAmountFn.amount}</span>
             {getMonthOrdersAmountFn.diffFromLastMonth >= 0 ? (
@@ -38,6 +39,8 @@ export function MonthlyOrdersAmountCard() {
               </>
             )}
           </>
+        ) : (
+          <CardSkeleton />
         )}
       </CardContent>
     </Card>

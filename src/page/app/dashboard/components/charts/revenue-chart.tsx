@@ -22,9 +22,9 @@ import { DateRangePicker } from '@/components/ui/date-range-picker'
 import { useMemo, useState } from 'react'
 import type { DateRange } from 'react-day-picker'
 import { subDays } from 'date-fns'
-import { Loader2 } from 'lucide-react'
+import { RevenueChartSkeleton } from './charts-skeleton/revenue-chart-skeleton'
 
-export function RevenueChat() {
+export function RevenueChart() {
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
     from: subDays(new Date(), 7),
     to: new Date()
@@ -89,8 +89,8 @@ export function RevenueChat() {
             </LineChart>
           </ResponsiveContainer>
         ) : (
-          <div className='flex h-2xs w-full items-center justify-center'>
-            <Loader2 className='h-8 w-8 animate-spin text-muted-foreground' />
+          <div className='flex items-center justify-center'>
+            <RevenueChartSkeleton />
           </div>
         )}
       </CardContent>

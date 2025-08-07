@@ -5,6 +5,7 @@ import colors from 'tailwindcss/colors'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useQuery } from '@tanstack/react-query'
 import { getPopularPproducts } from '@/api/http/services/order-metrics-dashboard-graphic/get-popular-products'
+import { PopularProductsChartSkeleton } from './charts-skeleton/popular-products-chart-skeleton'
 
 const COLORS = [
   colors.sky[500],
@@ -33,7 +34,7 @@ export function PopularPoductsChart() {
         </div>
       </CardHeader>
       <CardContent>
-        {getPopularPproductsFn && (
+        {getPopularPproductsFn ? (
           <ResponsiveContainer width="100%" height={240}>
             <PieChart style={{ fontSize: 12 }}>
               <Pie
@@ -88,6 +89,8 @@ export function PopularPoductsChart() {
               </Pie>
             </PieChart>
           </ResponsiveContainer>
+        ) : (
+          <PopularProductsChartSkeleton />
         )}
       </CardContent>
     </Card>

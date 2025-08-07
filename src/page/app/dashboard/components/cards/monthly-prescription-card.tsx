@@ -3,6 +3,7 @@ import { EuroIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { getMonthRevenue } from '@/api/http/services/order-metrics-dashboard-cards/get-month-revenue'
 import { useQuery } from '@tanstack/react-query'
+import { CardSkeleton } from './cards-skeleton/cards-skeleton'
 
 export function MonthlyPrescriptionCard() {
   const { data: getMonthRevenueFn } = useQuery({
@@ -19,7 +20,7 @@ export function MonthlyPrescriptionCard() {
         <EuroIcon className="text-muted-foreground h-4 w-4" />
       </CardHeader>
       <CardContent className="space-y-1">
-        {getMonthRevenueFn && (
+        {getMonthRevenueFn ? (
           <>
             <span className="text-2xl font-bold tracking-tight">{(getMonthRevenueFn.receipt / 100).toLocaleString('pt-PT', {
               style: 'currency',
@@ -37,6 +38,8 @@ export function MonthlyPrescriptionCard() {
               </p>
             )}
           </>
+        ) : (
+          <CardSkeleton />
         )}
       </CardContent>
     </Card>

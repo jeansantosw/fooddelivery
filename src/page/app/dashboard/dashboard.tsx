@@ -3,7 +3,7 @@ import { MonthlyCanceledOrdersAmountCard } from './components/cards/monthly-canc
 import { MonthlyOrdersAmountCard } from './components/cards/monthly-orders-amount-card'
 import { MonthlyPrescriptionCard } from './components/cards/monthly-prescription-card'
 import { PopularPoductsChart } from './components/charts/popular-products-chart'
-import { RevenueChat } from './components/charts/revenue-chat'
+import { RevenueChart } from './components/charts/revenue-chart'
 
 export function Dasboard() {
   return (
@@ -16,7 +16,7 @@ export function Dasboard() {
         <MonthlyPrescriptionCard />
       </div>
       <div className="grid grid-cols-9 gap-4">
-        <RevenueChat />
+        <RevenueChart />
         <PopularPoductsChart />
       </div>
     </div>
