@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "test": "vitest",
+    "dev:mocks:test": "vite --port 5050 --mode test",
     "coverage": "vitest run --coverage",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -67,5 +68,10 @@
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4",
     "vitest": "^3.2.4"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
