@@ -24,8 +24,8 @@ import {
 } from '@/components/ui/table'
 
 import type { IOrderDetails } from '../types'
-import { OrderStatus } from './order-status'
 import { OrderDetailsSkeleton } from './order-components-skeleton/order-details-skeleton'
+import { OrderStatus } from './order-status'
 
 export function OrderDetails({ orderId }: IOrderDetails) {
   const [isDatailsOpen, setIsDatailsOpen] = useState(false)
@@ -47,7 +47,7 @@ export function OrderDetails({ orderId }: IOrderDetails) {
         <DialogHeader className="mb-3">
           <span className="text-primary/80 font-semibold tracking-tight">
             <span className="text-muted-foreground pr-1">
-              Numero do pedido:{' '}
+              Número do pedido:{' '}
             </span>
             {orderId.toLocaleUpperCase()}
           </span>

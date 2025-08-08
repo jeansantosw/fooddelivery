@@ -1,4 +1,4 @@
-import { ClockPlus, CookingPot, Soup, Truck } from 'lucide-react'
+import { CircleX, ClockPlus, CookingPot, Soup, Truck } from 'lucide-react'
 
 import { type IOrderStatus, orderStatusMap } from '../types'
 
@@ -12,7 +12,8 @@ export function OrderStatus({ status }: IOrderStatus) {
       {status === 'delivering' && <Truck className="h-4 w-4 text-blue-500" />}
       {status === 'delivered' && <Soup className="h-4 w-4 text-green-800" />}
       {status === 'canceled' && (
-        <span data-testid="badge" className="h-2 w-2 rounded-full bg-red-800" />
+        <CircleX className="h-4 w-4 text-red-800" />
+        // <span data-testid="badge" className="h-2 w-2 rounded-full bg-red-800" />
       )}
       <span className="text-muted-foreground font-medium">
         {orderStatusMap[status]}

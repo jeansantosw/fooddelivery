@@ -111,7 +111,7 @@ export function OrderTableFilters() {
       />
       <Button variant="outline" type="submit" size="xs">
         <Search className="h-4 w-4" />
-        Fultrar resultados
+        Filtrar resultados
       </Button>
       <Button
         onClick={handleCleanFilter}

@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { toast } from 'sonner'
 
 import { signIn } from '@/api/http/services/auth/sign-in'
@@ -11,6 +11,7 @@ import { Label } from '@/components/ui/label'
 import type { TSigninForm } from './types'
 
 export function SignIn() {
+  const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const {
     register,
@@ -29,9 +30,13 @@ export function SignIn() {
   async function handleSignin({ email }: TSigninForm) {
     try {
       await authenticate({ email })
-      toast.success('Check seu e-mail')
+      toast.success('Verifique seu e-mail 📨')
+
+      await new Promise((resolve) => setTimeout(resolve, 4000)) // Apenas para simular o tempo de envio do email
+
+      navigate('/')
     } catch {
-      toast.error('Credenciais inválidas')
+      toast.error('Credenciais inválidas ❌')
     }
   }
 
