@@ -78,7 +78,7 @@ export function OrderTableFilters() {
       />
       <Input
         {...register('customerName')}
-        placeholder="Nome do clinete"
+        placeholder="Nome do cliente"
         autoComplete="off"
         className="h-8 w-80"
       />

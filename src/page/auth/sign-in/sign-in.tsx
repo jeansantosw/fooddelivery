@@ -43,7 +43,7 @@ export function SignIn() {
             Acessar o painel
           </h1>
           <p className="text-muted-foreground text-xs">
-            Acompanhe suas vendas pelo painel!
+            Veja os resultados do seu negócio
           </p>
         </div>
         <form
@@ -52,7 +52,12 @@ export function SignIn() {
         >
           <div className="space-y-2">
             <Label htmlFor="email">Digite seu e-mail</Label>
-            <Input id="email" type="email" {...register('email')} />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="off"
+              {...register('email')}
+            />
           </div>
           <Button disabled={isSubmitting} className="mt-2 w-full" type="submit">
             Acessar painel

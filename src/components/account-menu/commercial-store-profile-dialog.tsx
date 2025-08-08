@@ -109,7 +109,12 @@ export function CommercialStoreProfileDialog() {
             <Label className="" htmlFor="name">
               Nome
             </Label>
-            <Input className="" id="name" {...register('name')} />
+            <Input
+              autoComplete="off"
+              className=""
+              id="name"
+              {...register('name')}
+            />
           </div>
           <div className="flex flex-col gap-4">
             <Label className="" htmlFor="description">

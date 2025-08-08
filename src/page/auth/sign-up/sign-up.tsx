@@ -57,6 +57,7 @@ export function SignUp() {
           <div className="space-y-2">
             <Label htmlFor="restaurantName">Nome do estabelecimento</Label>
             <Input
+              autoComplete="off"
               id="restaurantName"
               type="text"
               {...register('restaurantName')}
@@ -64,15 +65,30 @@ export function SignUp() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="managerName">Digite seu nome</Label>
-            <Input id="managerName" type="text" {...register('managerName')} />
+            <Input
+              id="managerName"
+              type="text"
+              autoComplete="off"
+              {...register('managerName')}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="phoneNumber">Digite seu telefone</Label>
-            <Input id="phoneNumber" type="tel" {...register('phoneNumber')} />
+            <Input
+              id="phoneNumber"
+              autoComplete="off"
+              type="tel"
+              {...register('phoneNumber')}
+            />
           </div>
           <div className="space-y-2">
             <Label htmlFor="email">Digite seu e-mail</Label>
-            <Input id="email" type="email" {...register('email')} />
+            <Input
+              id="email"
+              type="email"
+              autoComplete="off"
+              {...register('email')}
+            />
           </div>
           <Button disabled={isSubmitting} className="w-full" type="submit">
             Finalizar cadastro
