@@ -1,4 +1,4 @@
-import { Home, LucideUtensilsCrossed } from 'lucide-react'
+import { LayoutDashboard, ListMinus } from 'lucide-react'
 
 import { AccountMenu } from '../account-menu/account-menu'
 import { NavLink } from '../nav-link/nav-link'
@@ -18,11 +18,11 @@ export function Header() {
         /> */}
         <nav className="ml-14 flex items-center space-x-4 lg:space-x-6">
           <NavLink to="/">
-            <Home className="h-4 w-4" />
+            <LayoutDashboard className="h-4 w-4" />
             Dashboard
           </NavLink>
           <NavLink to="/orders">
-            <LucideUtensilsCrossed className="h-4 w-4" />
+            <ListMinus className="h-4 w-4" />
             Pedidos
           </NavLink>
         </nav>

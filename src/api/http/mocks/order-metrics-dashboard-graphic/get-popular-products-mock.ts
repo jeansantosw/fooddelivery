@@ -8,12 +8,12 @@ export const getPopularPorductsMock = http.get<
   TGetPopularPproductsResponse
 >('metrics/popular-products', () => {
   return HttpResponse.json([
-    { product: 'Loja 1', amount: 100 },
-    { product: 'Loja 2', amount: 10 },
-    { product: 'Loja 3', amount: 302 },
-    { product: 'Loja 4', amount: 27 },
-    { product: 'Loja 5', amount: 340 },
-    { product: 'Loja 6', amount: 500 },
-    { product: 'Loja 7', amount: 50 },
+    { product: 'Hot-Dog 1', amount: 100 },
+    { product: 'Hot-Dog 2', amount: 10 },
+    { product: 'Hot-Dog 3', amount: 302 },
+    { product: 'Hot-Dog 4', amount: 27 },
+    { product: 'Hot-Dog 5', amount: 340 },
+    { product: 'Hot-Dog 6', amount: 500 },
+    { product: 'Hot-Dog 7', amount: 50 },
   ])
 })
