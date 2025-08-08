@@ -1,7 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { formatDistanceToNow } from 'date-fns'
 import { pt } from 'date-fns/locale'
-import { ArrowRight, X } from 'lucide-react'
+import { CookingPot, Soup, Truck, X } from 'lucide-react'
 
 import { approveOrders } from '@/api/http/services/orders/approve-order'
 import { cancelOrders } from '@/api/http/services/orders/cancel-order'
@@ -107,7 +107,7 @@ export function OrderTableRow({ order }: IOrderTableRow) {
             variant="outline"
             size="xs"
           >
-            <ArrowRight className="h-3 w-3" />
+            <CookingPot className="h-3 w-3" />
             Aprovar
           </Button>
         )}
@@ -120,7 +120,7 @@ export function OrderTableRow({ order }: IOrderTableRow) {
             size="xs"
             className="dark:text-muted bg-amber-400 hover:bg-amber-400/80 dark:bg-amber-400 hover:dark:bg-amber-400/80"
           >
-            <ArrowRight className="h-3 w-3" />
+            <Truck className="h-3 w-3" />
             Em entrega
           </Button>
         )}
@@ -132,7 +132,7 @@ export function OrderTableRow({ order }: IOrderTableRow) {
             size="xs"
             className="w-30 gap-4 bg-blue-500/80 hover:bg-blue-500/70 dark:bg-blue-500/80 dark:text-white hover:dark:bg-blue-500/50"
           >
-            <ArrowRight className="h-3 w-3" />
+            <Soup className="h-3 w-3" />
             Entregue
           </Button>
         )}

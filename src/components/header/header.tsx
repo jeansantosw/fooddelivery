@@ -12,7 +12,7 @@ export function Header() {
           foo<span className="text-primary">DD</span>elivery
         </p>
 
-        <nav className="ml-14 flex items-center space-x-4 lg:space-x-6">
+        <nav className="ml-auto flex items-center space-x-4 lg:space-x-6">
           <NavLink to="/">
             <LayoutDashboard className="h-4 w-4" />
             Dashboard
