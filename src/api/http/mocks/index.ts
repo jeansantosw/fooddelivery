@@ -12,6 +12,10 @@ import { getMonthOrdersAmountMock } from './order-metrics-dashboard-cards-mocks/
 import { getMonthRevenueMock } from './order-metrics-dashboard-cards-mocks/get-month-revenue-mock'
 import { getPopularPorductsMock } from './order-metrics-dashboard-graphic/get-popular-products-mock'
 import { getDailyRevenuePeriodMock } from './order-metrics-dashboard-period-mocks/get-daily-revenue-period-mock'
+import { approveOrderMock } from './orders/approve-order-mock'
+import { cancelOrderMock } from './orders/cancel-order-mock'
+import { deliverOrderMock } from './orders/deliver-order-mock'
+import { dispatchOrderMock } from './orders/dispatch-order-mock'
 import { getOrderDetailsMock } from './orders/get-orders-details-mock'
 import { getOrdersMock } from './orders/get-orders-mock'
 import { getProfileMock } from './profile/get-profile-mock'
@@ -30,6 +34,10 @@ export const worker = setupWorker(
   updateCommercialStoreProfileMock,
   getOrdersMock,
   getOrderDetailsMock,
+  approveOrderMock,
+  cancelOrderMock,
+  deliverOrderMock,
+  dispatchOrderMock,
 )
 
 export async function enableMSW() {

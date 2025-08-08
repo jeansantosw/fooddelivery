@@ -3,7 +3,7 @@ import { formatDistanceToNow } from 'date-fns'
 import { pt } from 'date-fns/locale'
 import { ArrowRight, X } from 'lucide-react'
 
-import { approveOrders } from '@/api/http/services/orders/apprrove-order'
+import { approveOrders } from '@/api/http/services/orders/approve-order'
 import { cancelOrders } from '@/api/http/services/orders/cancel-order'
 import { deliverOrders } from '@/api/http/services/orders/deliver-order'
 import { dispatchOrders } from '@/api/http/services/orders/dispatch-order'
