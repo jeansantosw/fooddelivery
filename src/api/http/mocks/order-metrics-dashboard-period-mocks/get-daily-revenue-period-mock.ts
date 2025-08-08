@@ -1,8 +1,12 @@
 import { http, HttpResponse } from 'msw'
+
 import type { TGetDailyRevenuePeriodResponse } from '../../services/order-metrics-dashboard-period/types'
 
-export const getDailyRevenuePeriodMock = http.get<never, never, TGetDailyRevenuePeriodResponse>('metrics/daily-receipt-in-period', () => {
-
+export const getDailyRevenuePeriodMock = http.get<
+  never,
+  never,
+  TGetDailyRevenuePeriodResponse
+>('metrics/daily-receipt-in-period', () => {
   return HttpResponse.json([
     { date: '01/05/2024', receipt: 1000 },
     { date: '02/05/2024', receipt: 100 },

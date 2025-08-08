@@ -1,14 +1,18 @@
-import type { ICommercialStoreRegistrationBoby } from '@/api/http/services/auth/types'
 import { http, HttpResponse } from 'msw'
 
-export const registerMock = http.post<never, ICommercialStoreRegistrationBoby>('restaurants', async ({ request }) => {
-  const { restaurantName } = await request.json()
+import type { ICommercialStoreRegistrationBoby } from '@/api/http/services/auth/types'
 
-  if (restaurantName === 'Chu Mania') {
-    return new HttpResponse(null, {
-      status: 201
-    })
-  }
+export const registerMock = http.post<never, ICommercialStoreRegistrationBoby>(
+  'restaurants',
+  async ({ request }) => {
+    const { restaurantName } = await request.json()
 
-  return new HttpResponse(null, { status: 400 })
-})
+    if (restaurantName === 'Chu Mania') {
+      return new HttpResponse(null, {
+        status: 201,
+      })
+    }
+
+    return new HttpResponse(null, { status: 400 })
+  },
+)
