@@ -90,7 +90,7 @@ Dashboard – visão geral das métricas.
 ![dashboard](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/dashboard.png)
 
 Lista de Pedidos – gerenciamento de status.
-![orders](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png)
+<img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png" width="300" />
 
 
 ## 🎯 Objetivo
