@@ -83,14 +83,18 @@ Pré-requisitos:
 - 2. Instalar Dependências -> npm install*
 
 ## 📸 Screenshot
-Tela de Login.
-![sign-in](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/sign-in.png)
 
-Dashboard – visão geral das métricas.
-![dashboard](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/dashboard.png)
+![sign-in]()
 
-Lista de Pedidos – gerenciamento de status.
-<img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png" width="300" />
+
+![dashboard]()
+
+
+<img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/sign-in.png" width="500" />
+
+<img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/dashboard.png" width="500" />
+
+<img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png" width="500" />
 
 
 ## 🎯 Objetivo
