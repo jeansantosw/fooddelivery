@@ -83,13 +83,15 @@ Pré-requisitos:
 - 2. Instalar Dependências -> npm install*
 
 ## 📸 Screenshot
-Tela de Login – acesso seguro ao sistema.
+Tela de Login.
+![sign-in](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/sign-in.png)
 
 Dashboard – visão geral das métricas.
+![dashboard](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/dashboard.png)
 
 Lista de Pedidos – gerenciamento de status.
+![orders](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png)
 
-Detalhes do Pedido – fatura e informações.
 
 ## 🎯 Objetivo
 Facilitar o dia a dia do comerciante, oferecendo uma solução centralizada para gestão de vendas e pedidos, reduzindo tempo de operação e aumentando a eficiência no atendimento.

@@ -22,11 +22,6 @@ O sistema oferece gráficos de rendimento diário e mensal, filtros avançados p
 | Destructive       |  #e7000a |
 
 
-## Autores
-
-- [@jeansantosw](https://www.github.com/jeansantosw)
-
-
 ## Documentação
 
 [Documentação](https://github.com/jeansantosw/fooddelivery/blob/main/doc/DOC.md)
