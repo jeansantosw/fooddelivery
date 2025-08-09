@@ -1,72 +1,72 @@
 ## 📒 Visão Geral
 
-O sistema é uma aplicação de gestão voltada para estabelecimentos do ramo alimentício, oferecendo um painel administrativo completo para controle de pedidos, métricas de vendas e informações do negócio.
-Com foco na praticidade, o sistema permite que o comerciante gerencie tudo em um único lugar, desde o cadastro da empresa até o acompanhamento de pedidos em tempo real.
+The system is a management application designed for food establishments, offering a comprehensive administrative dashboard for order control, sales metrics, and business information.
+With a focus on convenience, the system allows retailers to manage everything in one place, from company registration to real-time order tracking.
 
-## ⚙️ Funcionalidades
-### 1. Cadastro e Gerenciamento de Estabelecimento
-* Cadastro de nome e descrição da empresa.
+## ⚙️ Features
+### 1. Store Registration and Management
+* Register your company name and description.
 
-* Possibilidade de edição a qualquer momento.
+* Editable at any time.
 
-### 2. Gestão de Pedidos
+### 2. Order Management
 
-* Lista completa de pedidos.
+* Complete order list.
 
-* Alteração de status:
+* Status change:
 
-* Detalhes do pedido com visualização da fatura
+* Order details with invoice view
 
-### 3. Dashboard Interativo
-* Gráficos de rendimento diário, mensal e por período.
+### 3. Interactive Dashboard
+* Daily, monthly, and period-specific performance graphs.
 
-* Filtros de métricas por data.
+* Date-specific metric filters.
 
-* Indicadores e métricas principais para tomada de decisão.
+* Key indicators and metrics for decision-making.
 
-### 4. Filtros Avançados
-* Filtragem de pedidos por status e data.
+### 4. Advanced Filters
+* Order filtering by status and date.
 
-* Filtragem de métricas por períodos específicos.
-
-
-## 🔄 Fluxo de Funcionamento
-
-* Cadastro do Estabelecimento
-
-* O usuário cria uma conta e insere nome e descrição do negócio.
-
-* Configuração Inicial
-
-* Ajuste de informações básicas do perfil.
-
-* Recebimento de Pedidos.
-
-* Pedidos aparecem na lista em tempo real.
-
-* Gerenciamento de Status
-
-* O comerciante altera o status conforme o andamento do pedido.
-
-* Análise de Métricas
-
-* No dashboard, o usuário verifica rendimento diário, semanal e mensal.
-
-* Filtros e Relatórios
-
-* Aplicação de filtros para relatórios e histórico de vendas.
-
-## 🛠️ Instalação e Configuração
-Pré-requisitos:
-
-* Node.js (versão recomendada: 18 ou superior)
-
-* Banco de dados configurado (ex: PostgreSQL ou MySQL)
-
-* Gerenciador de pacotes (npm ou yarn)
+* Metric filtering by specific periods.
 
 
-- 1. Clonar o Repositório
+## 🔄 Operating Flow
+
+* Establishment Registration
+
+* The user creates an account and enters the business name and description.
+
+* Initial Setup
+
+* Adjust basic profile information.
+
+* Order Receiving
+
+* Orders appear in the list in real time.
+
+* Status Management
+
+* The merchant changes the status as the order progresses.
+
+* Metric Analysis
+
+* On the dashboard, the user can check daily, weekly, and monthly revenue.
+
+* Filters and Reports
+
+* Apply filters to reports and sales history.
+
+## 🛠️ Installation and Configuration
+Prerequisites:
+
+* Node.js (recommended version: 18 or higher)
+
+* Configured database (e.g., PostgreSQL or MySQL)
+
+* Package manager (npm or yarn)
+
+
+- 1. Clone the Repository
 
 ```bash
   git clone https://github.com/jeansantosw/fooddelivery.git
@@ -80,15 +80,9 @@ Pré-requisitos:
 
 
 
-- 2. Instalar Dependências -> npm install*
+- 2. Install Dependencies -> npm install*
 
 ## 📸 Screenshot
-
-![sign-in]()
-
-
-![dashboard]()
-
 
 <img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/sign-in.png" width="500" />
 
@@ -97,6 +91,6 @@ Pré-requisitos:
 <img src="https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/orders.png" width="500" />
 
 
-## 🎯 Objetivo
-Facilitar o dia a dia do comerciante, oferecendo uma solução centralizada para gestão de vendas e pedidos, reduzindo tempo de operação e aumentando a eficiência no atendimento.
+## 🎯 Objective
+To facilitate the retailer's daily routine by offering a centralized solution for managing sales and orders, reducing operational time and increasing service efficiency.
 

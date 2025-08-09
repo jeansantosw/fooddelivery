@@ -1,15 +1,13 @@
 
 # fooDDelivery
 
-A aplicação é uma plataforma de gestão voltada para comércios do ramo alimentício, permitindo que proprietários administrem seus estabelecimentos de forma prática e eficiente.
-Com um painel intuitivo, o usuário pode cadastrar e editar informações do negócio, acompanhar métricas de desempenho, gerenciar pedidos em tempo real e atualizar seus status de forma simples.
-O sistema oferece gráficos de rendimento diário e mensal, filtros avançados para métricas e pedidos, e acesso rápido a detalhes e faturas, tornando o gerenciamento mais ágil e organizado.
+The app is a management platform developed for food businesses, allowing owners to manage their establishments conveniently and efficiently. With an intuitive dashboard, users can record and edit business information, track performance metrics, manage orders in real time, and easily update their statuses. The system offers daily and monthly revenue graphs, advanced filters for metrics and orders, and quick access to details and invoices, making management more agile and organized.
 
 ![Logo](https://github.com/jeansantosw/fooddelivery/blob/main/doc/img/logo.png)
 
-## Documentação de cores
+## Color documentation
 
-| Cor               | Hexadecimal                                                |
+| Color               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
 | Background       |  #fefefe |
 | Foreground       |  #09090b |
@@ -22,19 +20,19 @@ O sistema oferece gráficos de rendimento diário e mensal, filtros avançados p
 | Destructive       |  #e7000a |
 
 
-## Documentação
+## Documentation
 
-[Documentação](https://github.com/jeansantosw/fooddelivery/blob/main/doc/DOC.md)
+[Documentation](https://github.com/jeansantosw/fooddelivery/blob/main/doc/DOC.md)
 
 
-## 🛠 Habilidades
+## 🛠 Skills
 Javascript, typescript, React 19, zod, react-query
 
 
 
-## Instalação
+## Installation
 
-Instale com npm
+Install with npm
 
 ```bash
   git clone https://github.com/jeansantosw/fooddelivery.git
@@ -50,18 +48,18 @@ Instale com npm
 
 | Fase       | Status          | Descrição                                                          |
 | ---------- | --------------- | ------------------------------------------------------------------ |
-| **Fase 1** | ✅ Concluído     | Cadastro de comércio, painel básico, gestão de pedidos com status. |
-| **Fase 2** | ✅ Concluído     | Dashboard com gráficos e métricas.      |
-| **Fase 3** | ✅ Concluído | Detalhes do pedido, visualização da fatura, edição de perfil.      |
-| **Fase 4** | ✅ Concluído     | Notificações em tempo real para atualização de pedidos.            |
-| **Fase 4** | ✅ Concluído     | filtros por ID, nome e status.            |
-| **Fase 5** | ⏳ Planejado     | Integração com sistemas de pagamento e gateways de entrega.        |
-| **Fase 6** | ⏳ Planejado     | Aplicativo mobile para gestão fora do computador.                  |
-| **Fase 7** | ⏳ Planejado     | Relatórios avançados e exportação de dados (CSV, PDF).             |
-| **Fase 8** | ⏳ Planejado     | Multiusuário com permissões e níveis de acesso diferenciados.      |
+| **Fase 1** | ✅ Completed     | Store registration, basic panel, order management with status. |
+| **Fase 2** | ✅ Completed     | Dashboard with graphs and metrics.     |
+| **Fase 3** | ✅ Completed | Order details, invoice view, profile editing.      |
+| **Fase 4** | ✅ Completed     | Real-time notifications for order updates.            |
+| **Fase 4** | ✅ Completed     | Filter by ID, name and status.            |
+| **Fase 5** | ⏳ Planejado     | Integration with payment systems and delivery gateways.        |
+| **Fase 6** | ⏳ Planejado     | Mobile application for management outside the computer.                  |
+| **Fase 7** | ⏳ Planejado     | Advanced reporting and data export (CSV, PDF).             |
+| **Fase 8** | ⏳ Planejado     | Multi-user with different permissions and access levels. RBAC      |
 
 
-## Stack utilizada
+## Stack used
 
 **Front-end:** 
 
@@ -77,9 +75,9 @@ tailwindcss, shadcn
 
 
 
-## Rodando os testes
+## Running the tests
 
-Para rodar os testes, rode o seguinte comando
+To run the tests, run the following command
 
 ```bash
   npm run test
