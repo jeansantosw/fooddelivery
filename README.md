@@ -48,15 +48,15 @@ Install with npm
 
 | Fase       | Status          | Descrição                                                          |
 | ---------- | --------------- | ------------------------------------------------------------------ |
-| **Fase 1** | ✅ Completed     | Store registration, basic panel, order management with status. |
-| **Fase 2** | ✅ Completed     | Dashboard with graphs and metrics.     |
-| **Fase 3** | ✅ Completed | Order details, invoice view, profile editing.      |
-| **Fase 4** | ✅ Completed     | Real-time notifications for order updates.            |
-| **Fase 4** | ✅ Completed     | Filter by ID, name and status.            |
-| **Fase 5** | ⏳ Planejado     | Integration with payment systems and delivery gateways.        |
-| **Fase 6** | ⏳ Planejado     | Mobile application for management outside the computer.                  |
-| **Fase 7** | ⏳ Planejado     | Advanced reporting and data export (CSV, PDF).             |
-| **Fase 8** | ⏳ Planejado     | Multi-user with different permissions and access levels. RBAC      |
+| **Project phase 1** | ✅ Completed     | Store registration, basic panel, order management with status. |
+| **Project phase 2** | ✅ Completed     | Dashboard with graphs and metrics.     |
+| **Project phase 3** | ✅ Completed | Order details, invoice view, profile editing.      |
+| **Project phase 4** | ✅ Completed     | Real-time notifications for order updates.            |
+| **Project phase 4** | ✅ Completed     | Filter by ID, name and status.            |
+| **Project phase 5** | ⏳ Planejado     | Integration with payment systems and delivery gateways.        |
+| **Project phase 6** | ⏳ Planejado     | Mobile application for management outside the computer.                  |
+| **Project phase 7** | ⏳ Planejado     | Advanced reporting and data export (CSV, PDF).             |
+| **Project phase 8** | ⏳ Planejado     | Multi-user with different permissions and access levels. RBAC      |
 
 
 ## Stack used
