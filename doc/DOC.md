@@ -66,7 +66,18 @@ Pré-requisitos:
 * Gerenciador de pacotes (npm ou yarn)
 
 
-- 1. Clonar o Repositório  -> [git clone*](https://github.com/jeansantosw/fooddelivery.git) 
+- 1. Clonar o Repositório
+
+```bash
+  git clone https://github.com/jeansantosw/fooddelivery.git
+  cd fooddelivery
+  npm install
+  npm run dev
+  npm run test
+  npm run dev:mocks:test
+  npx playwright test --ui 
+```
+
 
 
 - 2. Instalar Dependências -> npm install*
